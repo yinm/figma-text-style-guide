@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
