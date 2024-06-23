@@ -21,6 +21,7 @@
     "eslint-config-yinm": "^0.0.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-singlefile": "^2.0.2"
   }
 }
