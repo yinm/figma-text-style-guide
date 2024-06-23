@@ -15,6 +15,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@figma/plugin-typings':
+        specifier: ^1.96.0
+        version: 1.96.0
       '@types/node':
         specifier: ^20.14.8
         version: 20.14.8
@@ -215,6 +218,9 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@figma/plugin-typings@1.96.0':
+    resolution: {integrity: sha512-fk/izqv13KHh8SKQF0d3475j7K9RaQ1EhPQT9E3iuRJnf492qYwj68hy1rO1CdZjm++l6Lk6ayhSowPLARq7Zw==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1501,6 +1507,8 @@ snapshots:
   '@eslint/js@9.5.0': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@figma/plugin-typings@1.96.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
