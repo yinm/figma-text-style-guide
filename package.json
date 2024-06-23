@@ -7,7 +7,8 @@
     "dev": "vite",
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint 'src/'",
+    "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check 'src/'",
     "format:fix": "prettier --write 'src/'",
     "preview": "vite preview"
