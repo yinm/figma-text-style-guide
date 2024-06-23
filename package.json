@@ -4,15 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "pnpm build:plugin & pnpm build:ui",
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
     "lint": "eslint 'src/'",
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check 'src/'",
-    "format:fix": "prettier --write 'src/'",
-    "preview": "vite preview"
+    "format:fix": "prettier --write 'src/'"
   },
   "dependencies": {
     "react": "^18.3.1",
