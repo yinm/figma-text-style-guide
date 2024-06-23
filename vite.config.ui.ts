@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   root: "src/ui",
   build: {
+    emptyOutDir: false, // Suppress warning
     outDir: path.resolve("dist"),
   },
 });
