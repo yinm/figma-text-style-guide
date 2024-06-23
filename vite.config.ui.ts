@@ -1,3 +1,4 @@
+import path from "node:path";
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
@@ -7,6 +8,6 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   root: "src/ui",
   build: {
-    outDir: "dist",
+    outDir: path.resolve("dist"),
   },
 });
