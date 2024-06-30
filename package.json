@@ -10,7 +10,8 @@
     "lint": "eslint 'src/'",
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check 'src/'",
-    "format:fix": "prettier --write 'src/'"
+    "format:fix": "prettier --write 'src/'",
+    "ladle": "ladle serve"
   },
   "dependencies": {
     "react": "^18.3.1",
