@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "dev:ui": "vite -c ./vite.config.ui.ts",
     "build": "pnpm build:plugin & pnpm build:ui",
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
