@@ -8,6 +8,7 @@
     "build": "pnpm build:plugin & pnpm build:ui",
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
+    "test": "vitest",
     "lint": "eslint 'src/'",
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
