@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "ladle": "ladle serve"
+    "ladle": "ladle serve  --config ./src/ui/.ladle"
   },
   "dependencies": {
     "react": "^18.3.1",
