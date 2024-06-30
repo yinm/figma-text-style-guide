@@ -24,10 +24,13 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",
     "eslint-config-yinm": "^0.0.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.39",
     "prettier": "^3.3.2",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-singlefile": "^2.0.2"
