@@ -2,12 +2,13 @@ import { describe } from "node:test";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { expect, it, vi } from "vitest";
+import { noop } from "../../tests/noop";
 import { Button } from "./Button";
 
 describe("Button", () => {
   it("should render a button with children prop", () => {
     const children = "Create";
-    render(<Button onClick={() => undefined}>{children}</Button>);
+    render(<Button onClick={noop}>{children}</Button>);
 
     const button = screen.getByRole("button", { name: children });
     expect(button.textContent).toBe(children);
