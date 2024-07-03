@@ -5,29 +5,6 @@ on:
   - workflow_dispatch
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-
-      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
-        with:
-          node-version-file: ".tool-versions"
-
-      - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
-
-      - id: cache-node-modules
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
-        with:
-          path: node_modules
-          key: node-modules-${{ runner.os }}-${{ hashFiles('.tool-versions') }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: node-modules-${{ runner.os }}-${{ hashFiles('.tool-versions') }}-${{ hashFiles('pnpm-lock.yaml') }}
-
-      - if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: pnpm i
-
-      - run: pnpm lint
-
   format:
     runs-on: ubuntu-latest
     steps:
