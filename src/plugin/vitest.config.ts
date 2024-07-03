@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   test: {
-    include: ["**/*.spec.ts"],
+    include: ["src/plugin/**/*.spec.ts"],
     setupFiles: "src/plugin/tests/setup.ts",
   },
 });
