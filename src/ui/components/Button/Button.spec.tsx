@@ -15,10 +15,10 @@ describe("Button", () => {
   });
 
   it("should handle click event", async () => {
+    const user = userEvent.setup();
     const handleClick = vi.fn();
     render(<Button onClick={handleClick}>Click me</Button>);
 
-    const user = userEvent.setup();
     await user.click(screen.getByRole("button"));
     expect(handleClick).toHaveBeenCalled();
   });
