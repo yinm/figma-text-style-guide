@@ -9,6 +9,7 @@
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
     "test": "vitest",
+    "test:ui": "vitest -c ./src/ui/vitest.config.ts",
     "lint": "eslint 'src/'",
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
