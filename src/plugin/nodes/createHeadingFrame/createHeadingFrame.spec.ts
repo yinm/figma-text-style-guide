@@ -22,3 +22,16 @@ it("create headingFrame with expected properties", async () => {
   const descriptionText = heading.children[1] as TextNode;
   expect(descriptionText.characters).toBe(properties.description);
 });
+
+it("does not create description text if description does not exist", async () => {
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+
+  const properties = {
+    name: "text style name",
+  };
+  const heading = createHeadingFrame(properties);
+
+  expect(heading.children.length).toBe(1);
+  const nameText = heading.children[0] as TextNode;
+  expect(nameText.characters).toBe(properties.name);
+});

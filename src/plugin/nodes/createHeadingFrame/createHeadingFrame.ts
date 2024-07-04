@@ -2,7 +2,7 @@ import { styles } from "../styles";
 
 interface Properties {
   name: TextStyle["name"];
-  description: TextStyle["description"];
+  description?: TextStyle["description"];
 }
 
 export function createHeadingFrame({ name, description }: Properties) {
@@ -16,9 +16,11 @@ export function createHeadingFrame({ name, description }: Properties) {
   nameText.characters = name;
   nameText.fontSize = styles.fontSize.heading;
 
-  const descriptionText = figma.createText();
-  headingFrame.appendChild(descriptionText);
-  descriptionText.characters = description;
+  if (typeof description === "string") {
+    const descriptionText = figma.createText();
+    headingFrame.appendChild(descriptionText);
+    descriptionText.characters = description;
+  }
 
   return headingFrame;
 }
