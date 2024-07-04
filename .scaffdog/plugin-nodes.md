@@ -18,11 +18,13 @@ export function {{ inputs.name }}() {
 # `{{ inputs.name }}/{{ inputs.name }}.spec.ts`
 
 ```typescript
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { {{ inputs.name }} } from './{{ inputs.name }}'
 
-it("test", () => {
-  expect(1).toBe(1);
+describe("{{ inputs.name }}", () => {
+  it("test", () => {
+    expect(1).toBe(1);
+  });
 });
 
 ```
