@@ -15,6 +15,7 @@
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
+    "scaffdog": "scaffdog generate",
     "ladle": "ladle serve  --config ./src/ui/.ladle"
   },
   "dependencies": {
