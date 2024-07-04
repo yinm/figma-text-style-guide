@@ -4,6 +4,7 @@ export const styles = {
   },
   spacing: {
     sm: 8,
+    md: 16,
     xl: 64,
   },
 };
