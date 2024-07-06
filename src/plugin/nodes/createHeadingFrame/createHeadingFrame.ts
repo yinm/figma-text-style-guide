@@ -18,8 +18,10 @@ export function createHeadingFrame({ name, description }: Properties) {
 
   if (typeof description === "string") {
     const descriptionText = figma.createText();
-    headingFrame.appendChild(descriptionText);
+    // need to set characters before appendChild, If not, width is 0.
     descriptionText.characters = description;
+    headingFrame.appendChild(descriptionText);
+    // need to set layoutSizingHorizontal after appendChild. If not, an error happens.
     descriptionText.layoutSizingHorizontal = "FILL";
   }
 
