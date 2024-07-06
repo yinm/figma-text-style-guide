@@ -8,6 +8,7 @@
     "build": "pnpm build:plugin & pnpm build:ui",
     "build:plugin": "vite build -c ./vite.config.plugin.ts",
     "build:ui": "vite build -c ./vite.config.ui.ts",
+    "watch": "pnpm build:plugin --watch & pnpm build:ui --watch",
     "test": "pnpm test:plugin & pnpm test:ui",
     "test:plugin": "vitest -c ./src/plugin/vitest.config.ts",
     "test:ui": "vitest -c ./src/ui/vitest.config.ts",
@@ -15,6 +16,7 @@
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
+    "scaffdog": "scaffdog generate",
     "ladle": "ladle serve  --config ./src/ui/.ladle"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
+    "scaffdog": "^4.0.0",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
