@@ -1,4 +1,7 @@
 export const styles = {
+  colors: {
+    keyText: "777777",
+  },
   fontSize: {
     heading: 24,
   },
