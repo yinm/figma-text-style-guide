@@ -20,6 +20,7 @@ export function createHeadingFrame({ name, description }: Properties) {
     const descriptionText = figma.createText();
     headingFrame.appendChild(descriptionText);
     descriptionText.characters = description;
+    descriptionText.layoutSizingHorizontal = "FILL";
   }
 
   return headingFrame;
