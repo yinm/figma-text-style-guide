@@ -11,4 +11,7 @@ export const styles = {
     lg: 32,
     xl: 64,
   },
+  minWidth: {
+    specFrame: 250,
+  },
 };

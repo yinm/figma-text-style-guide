@@ -3,7 +3,7 @@ import { styles } from "../styles";
 
 interface Properties {
   key: string;
-  value: string | number;
+  value: string | number | boolean;
 }
 
 export function createPropertyFrame({ key, value }: Properties) {
