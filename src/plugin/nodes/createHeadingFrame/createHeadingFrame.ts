@@ -2,7 +2,7 @@ import { styles } from "../styles";
 
 interface Properties {
   name: TextStyle["name"];
-  description?: TextStyle["description"];
+  description: TextStyle["description"];
 }
 
 export function createHeadingFrame({ name, description }: Properties) {
@@ -16,7 +16,7 @@ export function createHeadingFrame({ name, description }: Properties) {
   nameText.characters = name;
   nameText.fontSize = styles.fontSize.heading;
 
-  if (typeof description === "string") {
+  if (description !== "") {
     const descriptionText = figma.createText();
     // need to set characters before appendChild, If not, width is 0.
     descriptionText.characters = description;

@@ -29,6 +29,7 @@ describe("createHeadingFrame", () => {
   it("does not create description text if description does not exist", () => {
     const properties = {
       name: "text style name",
+      description: "",
     };
     const heading = createHeadingFrame(properties);
 
