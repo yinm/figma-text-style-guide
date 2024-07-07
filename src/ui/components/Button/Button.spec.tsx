@@ -1,7 +1,6 @@
-import { describe } from "node:test";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { noop } from "../../tests/noop";
 import { Button } from "./Button";
 
@@ -11,6 +10,7 @@ describe("Button", () => {
     render(<Button onClick={noop}>{children}</Button>);
 
     const button = screen.getByRole("button", { name: children });
+
     expect(button.textContent).toBe(children);
   });
 
@@ -20,6 +20,7 @@ describe("Button", () => {
     render(<Button onClick={handleClick}>Click me</Button>);
 
     await user.click(screen.getByRole("button"));
+
     expect(handleClick).toHaveBeenCalled();
   });
 });
