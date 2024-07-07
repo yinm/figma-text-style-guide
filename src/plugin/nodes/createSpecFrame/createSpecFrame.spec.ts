@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
+import { NeedToOutputTextStyles } from "../../outputableTextStyles";
 import { styles } from "../styles";
 import { createSpecFrame } from "./createSpecFrame";
 
@@ -8,35 +9,52 @@ function keyDelimiter(keyText: string) {
   return `${keyText}: `;
 }
 
+const textStyles = {
+  fontName: {
+    family: "Helvetica",
+    style: "Regular",
+  },
+  fontSize: 18,
+  lineHeight: {
+    unit: "AUTO",
+  },
+  letterSpacing: {
+    value: 2,
+    unit: "PIXELS",
+  },
+  paragraphSpacing: 4,
+  textDecoration: "NONE",
+  textCase: "ORIGINAL",
+  leadingTrim: "CAP_HEIGHT",
+  listSpacing: 6,
+  hangingPunctuation: true,
+  hangingList: false,
+  paragraphIndent: 8,
+} satisfies TextStyles;
+
+const needToOutputProperties = {
+  fontFamily: true,
+  fontStyle: true,
+  fontSize: true,
+  lineHeight: true,
+  letterSpacing: true,
+  paragraphSpacing: true,
+  textDecoration: true,
+  textCase: true,
+  leadingTrim: true,
+  listSpacing: true,
+  hangingPunctuation: true,
+  hangingList: true,
+  paragraphIndent: true,
+} satisfies NeedToOutputTextStyles;
+
 describe("createSpecFrame", () => {
   beforeEach(async () => {
     await figma.loadFontAsync({ family: "Inter", style: "Regular" });
   });
 
   it("create specFrame with expected properties", () => {
-    const textStyles = {
-      fontName: {
-        family: "Helvetica",
-        style: "Regular",
-      },
-      fontSize: 18,
-      lineHeight: {
-        unit: "AUTO",
-      },
-      letterSpacing: {
-        value: 2,
-        unit: "PIXELS",
-      },
-      paragraphSpacing: 4,
-      textDecoration: "NONE",
-      textCase: "ORIGINAL",
-      leadingTrim: "CAP_HEIGHT",
-      listSpacing: 6,
-      hangingPunctuation: true,
-      hangingList: false,
-      paragraphIndent: 8,
-    } satisfies TextStyles;
-    const spec = createSpecFrame(textStyles);
+    const spec = createSpecFrame(textStyles, needToOutputProperties);
 
     expect(spec.name).toBe("Spec");
     expect(spec.layoutMode).toBe("VERTICAL");
@@ -137,7 +155,7 @@ describe("createSpecFrame", () => {
         unit: "PIXELS",
       },
     } satisfies TextStyles;
-    const spec = createSpecFrame(textStyles);
+    const spec = createSpecFrame(textStyles, needToOutputProperties);
 
     const lineHeight = spec.children[0] as FrameNode;
     const lineHeightKey = lineHeight.children[0] as TextNode;

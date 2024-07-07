@@ -1,9 +1,15 @@
-import { type OutputableTextStyles } from "../../outputableTextStyles";
+import {
+  type NeedToOutputTextStyles,
+  type OutputableTextStyles,
+} from "../../outputableTextStyles";
 import { getObjectKeys } from "../../utils/getObjectKeys";
 import { createPropertyFrame } from "../createPropertyFrame/createPropertyFrame";
 import { styles } from "../styles";
 
-export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
+export function createSpecFrame(
+  textStyles: Partial<OutputableTextStyles>,
+  needToOutputProperties: NeedToOutputTextStyles,
+) {
   const specFrame = figma.createFrame();
   specFrame.name = "Spec";
   specFrame.layoutMode = "VERTICAL";
