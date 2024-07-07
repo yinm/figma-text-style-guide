@@ -1,12 +1,16 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import { Switch } from './Switch';
+import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
+import { Switch } from "./Switch";
 
 describe("Switch", () => {
-  it("test", () => {
-    render(<Switch example="test" />);
+  it("should handle click event", async () => {
+    const user = userEvent.setup();
+    const handleClick = vi.fn();
+    render(<Switch checked={false} toggleChecked={handleClick} />);
 
-    const component = screen.getByText('test');
-    expect(component.textContent).toBe('test');
+    await user.click(screen.getByTestId("switch-track"));
+
+    expect(handleClick).toHaveBeenCalled();
   });
 });
