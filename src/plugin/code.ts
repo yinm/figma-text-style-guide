@@ -5,7 +5,7 @@ import { createSpecFrame } from "./nodes/createSpecFrame/createSpecFrame";
 import { createTextStyleFrame } from "./nodes/createTextStyleFrame/createTextStyleFrame";
 import { createTextStyleGuideFrame } from "./nodes/createTextStyleGuideFrame/createTextStyleGuideFrame";
 
-figma.showUI(__html__);
+figma.showUI(__html__, { width: 320, height: 640 });
 
 figma.ui.onmessage = async () => {
   const textStyleGuide = createTextStyleGuideFrame();
