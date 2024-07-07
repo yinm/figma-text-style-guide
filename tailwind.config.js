@@ -9,6 +9,7 @@ export default {
     },
     textColor: {
       "on-primary": "#ffffff",
+      label: "#ffffff",
     },
     borderRadius: {
       lg: "0.5rem",
