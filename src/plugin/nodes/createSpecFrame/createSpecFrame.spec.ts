@@ -9,6 +9,13 @@ function keyDelimiter(keyText: string) {
   return `${keyText}: `;
 }
 
+function includeKeyText(spec: FrameNode, keyText: string) {
+  return spec.children.some((child) => {
+    const textNode = (child as FrameNode).children[0] as TextNode;
+    return textNode.characters === keyDelimiter(keyText);
+  });
+}
+
 const textStyles = {
   fontName: {
     family: "Helvetica",
@@ -164,5 +171,124 @@ describe("createSpecFrame", () => {
     expect(lineHeightValue.characters).toBe(
       `${textStyles.lineHeight.value}${textStyles.lineHeight.unit.toLowerCase()}`,
     );
+  });
+
+  describe("when needToOutputProperties is false, does not output text style", () => {
+    it("fontFamily", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        fontFamily: false,
+      });
+
+      expect(includeKeyText(spec, "Font Family")).toBe(false);
+    });
+
+    it("fontStyle", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        fontStyle: false,
+      });
+
+      expect(includeKeyText(spec, "Font Style")).toBe(false);
+    });
+
+    it("fontSize", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        fontSize: false,
+      });
+
+      expect(includeKeyText(spec, "Font Size")).toBe(false);
+    });
+
+    it("lineHeight", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        lineHeight: false,
+      });
+
+      expect(includeKeyText(spec, "Line Height")).toBe(false);
+    });
+
+    it("letterSpacing", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        letterSpacing: false,
+      });
+
+      expect(includeKeyText(spec, "Letter Spacing")).toBe(false);
+    });
+
+    it("paragraphSpacing", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        paragraphSpacing: false,
+      });
+
+      expect(includeKeyText(spec, "Paragraph Spacing")).toBe(false);
+    });
+
+    it("textDecoration", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        textDecoration: false,
+      });
+
+      expect(includeKeyText(spec, "Text Decoration")).toBe(false);
+    });
+
+    it("textCase", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        textCase: false,
+      });
+
+      expect(includeKeyText(spec, "Text Case")).toBe(false);
+    });
+
+    it("leadingTrim", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        leadingTrim: false,
+      });
+
+      expect(includeKeyText(spec, "Leading Trim")).toBe(false);
+    });
+
+    it("listSpacing", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        listSpacing: false,
+      });
+
+      expect(includeKeyText(spec, "List Spacing")).toBe(false);
+    });
+
+    it("hangingPunctuation", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        hangingPunctuation: false,
+      });
+
+      expect(includeKeyText(spec, "Hanging Punctuation")).toBe(false);
+    });
+
+    it("hangingList", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        hangingList: false,
+      });
+
+      expect(includeKeyText(spec, "Hanging List")).toBe(false);
+    });
+
+    it("paragraphIndent", () => {
+      const spec = createSpecFrame(textStyles, {
+        ...needToOutputProperties,
+        paragraphIndent: false,
+      });
+
+      expect(includeKeyText(spec, "Paragraph Indent")).toBe(false);
+    });
   });
 });

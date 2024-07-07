@@ -23,22 +23,30 @@ export function createSpecFrame(
       case "fontName": {
         const { family, style } = textStyles.fontName!;
 
-        specFrame.appendChild(
-          createPropertyFrame({
-            key: "Font Family",
-            value: family,
-          }),
-        );
-        specFrame.appendChild(
-          createPropertyFrame({
-            key: "Font Style",
-            value: style,
-          }),
-        );
+        if (needToOutputProperties.fontFamily) {
+          specFrame.appendChild(
+            createPropertyFrame({
+              key: "Font Family",
+              value: family,
+            }),
+          );
+        }
+
+        if (needToOutputProperties.fontStyle) {
+          specFrame.appendChild(
+            createPropertyFrame({
+              key: "Font Style",
+              value: style,
+            }),
+          );
+        }
+
         break;
       }
 
       case "fontSize": {
+        if (!needToOutputProperties.fontSize) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Font Size",
@@ -49,6 +57,8 @@ export function createSpecFrame(
       }
 
       case "lineHeight": {
+        if (!needToOutputProperties.lineHeight) break;
+
         const lineHeight = textStyles.lineHeight!;
         const key = "Line Height";
 
@@ -72,6 +82,8 @@ export function createSpecFrame(
       }
 
       case "letterSpacing": {
+        if (!needToOutputProperties.letterSpacing) break;
+
         const { value, unit } = textStyles.letterSpacing!;
         specFrame.appendChild(
           createPropertyFrame({
@@ -83,6 +95,8 @@ export function createSpecFrame(
       }
 
       case "paragraphSpacing": {
+        if (!needToOutputProperties.paragraphSpacing) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Paragraph Spacing",
@@ -93,6 +107,8 @@ export function createSpecFrame(
       }
 
       case "textDecoration": {
+        if (!needToOutputProperties.textDecoration) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Text Decoration",
@@ -103,6 +119,8 @@ export function createSpecFrame(
       }
 
       case "textCase": {
+        if (!needToOutputProperties.textCase) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Text Case",
@@ -113,6 +131,8 @@ export function createSpecFrame(
       }
 
       case "leadingTrim": {
+        if (!needToOutputProperties.leadingTrim) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Leading Trim",
@@ -123,6 +143,8 @@ export function createSpecFrame(
       }
 
       case "listSpacing": {
+        if (!needToOutputProperties.listSpacing) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "List Spacing",
@@ -133,6 +155,8 @@ export function createSpecFrame(
       }
 
       case "hangingPunctuation": {
+        if (!needToOutputProperties.hangingPunctuation) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Hanging Punctuation",
@@ -143,6 +167,8 @@ export function createSpecFrame(
       }
 
       case "hangingList": {
+        if (!needToOutputProperties.hangingList) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Hanging List",
@@ -153,6 +179,8 @@ export function createSpecFrame(
       }
 
       case "paragraphIndent": {
+        if (!needToOutputProperties.paragraphIndent) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Paragraph Indent",
