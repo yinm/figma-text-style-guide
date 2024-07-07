@@ -4,10 +4,15 @@ import { createSampleText } from "./nodes/createSampleText/createSampleText";
 import { createSpecFrame } from "./nodes/createSpecFrame/createSpecFrame";
 import { createTextStyleFrame } from "./nodes/createTextStyleFrame/createTextStyleFrame";
 import { createTextStyleGuideFrame } from "./nodes/createTextStyleGuideFrame/createTextStyleGuideFrame";
+import { type NeedToOutputTextStyles } from "./outputableTextStyles";
 
 figma.showUI(__html__, { width: 320, height: 640 });
 
-figma.ui.onmessage = async () => {
+figma.ui.onmessage = async ({
+  needToOutputTextStyles,
+}: {
+  needToOutputTextStyles: NeedToOutputTextStyles;
+}) => {
   const textStyleGuide = createTextStyleGuideFrame();
 
   const textStyles = await figma.getLocalTextStylesAsync();
@@ -70,20 +75,23 @@ figma.ui.onmessage = async () => {
 
     const body = createBodyFrame();
     body.appendChild(
-      createSpecFrame({
-        fontName,
-        fontSize,
-        lineHeight,
-        letterSpacing,
-        paragraphSpacing,
-        textDecoration,
-        textCase,
-        leadingTrim,
-        listSpacing,
-        hangingPunctuation,
-        hangingList,
-        paragraphIndent,
-      }),
+      createSpecFrame(
+        {
+          fontName,
+          fontSize,
+          lineHeight,
+          letterSpacing,
+          paragraphSpacing,
+          textDecoration,
+          textCase,
+          leadingTrim,
+          listSpacing,
+          hangingPunctuation,
+          hangingList,
+          paragraphIndent,
+        },
+        needToOutputTextStyles,
+      ),
     );
     body.appendChild(await createSampleText(textStyle));
     textStyleFrame.appendChild(body);

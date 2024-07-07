@@ -1,9 +1,15 @@
-import { type OutputableTextStyles } from "../../outputableTextStyles";
+import {
+  type NeedToOutputTextStyles,
+  type OutputableTextStyles,
+} from "../../outputableTextStyles";
 import { getObjectKeys } from "../../utils/getObjectKeys";
 import { createPropertyFrame } from "../createPropertyFrame/createPropertyFrame";
 import { styles } from "../styles";
 
-export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
+export function createSpecFrame(
+  textStyles: Partial<OutputableTextStyles>,
+  needToOutputProperties: NeedToOutputTextStyles,
+) {
   const specFrame = figma.createFrame();
   specFrame.name = "Spec";
   specFrame.layoutMode = "VERTICAL";
@@ -17,22 +23,30 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       case "fontName": {
         const { family, style } = textStyles.fontName!;
 
-        specFrame.appendChild(
-          createPropertyFrame({
-            key: "Font Family",
-            value: family,
-          }),
-        );
-        specFrame.appendChild(
-          createPropertyFrame({
-            key: "Font Style",
-            value: style,
-          }),
-        );
+        if (needToOutputProperties.fontFamily) {
+          specFrame.appendChild(
+            createPropertyFrame({
+              key: "Font Family",
+              value: family,
+            }),
+          );
+        }
+
+        if (needToOutputProperties.fontStyle) {
+          specFrame.appendChild(
+            createPropertyFrame({
+              key: "Font Style",
+              value: style,
+            }),
+          );
+        }
+
         break;
       }
 
       case "fontSize": {
+        if (!needToOutputProperties.fontSize) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Font Size",
@@ -43,6 +57,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "lineHeight": {
+        if (!needToOutputProperties.lineHeight) break;
+
         const lineHeight = textStyles.lineHeight!;
         const key = "Line Height";
 
@@ -66,6 +82,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "letterSpacing": {
+        if (!needToOutputProperties.letterSpacing) break;
+
         const { value, unit } = textStyles.letterSpacing!;
         specFrame.appendChild(
           createPropertyFrame({
@@ -77,6 +95,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "paragraphSpacing": {
+        if (!needToOutputProperties.paragraphSpacing) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Paragraph Spacing",
@@ -87,6 +107,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "textDecoration": {
+        if (!needToOutputProperties.textDecoration) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Text Decoration",
@@ -97,6 +119,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "textCase": {
+        if (!needToOutputProperties.textCase) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Text Case",
@@ -107,6 +131,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "leadingTrim": {
+        if (!needToOutputProperties.leadingTrim) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Leading Trim",
@@ -117,6 +143,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "listSpacing": {
+        if (!needToOutputProperties.listSpacing) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "List Spacing",
@@ -127,6 +155,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "hangingPunctuation": {
+        if (!needToOutputProperties.hangingPunctuation) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Hanging Punctuation",
@@ -137,6 +167,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "hangingList": {
+        if (!needToOutputProperties.hangingList) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Hanging List",
@@ -147,6 +179,8 @@ export function createSpecFrame(textStyles: Partial<OutputableTextStyles>) {
       }
 
       case "paragraphIndent": {
+        if (!needToOutputProperties.paragraphIndent) break;
+
         specFrame.appendChild(
           createPropertyFrame({
             key: "Paragraph Indent",

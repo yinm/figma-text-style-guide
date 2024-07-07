@@ -106,7 +106,28 @@ function App() {
       <div className="flex justify-end">
         <Button
           onClick={() => {
-            parent.postMessage({ pluginMessage: {} }, "*");
+            parent.postMessage(
+              {
+                pluginMessage: {
+                  needToOutputTextStyles: {
+                    fontFamily,
+                    fontStyle,
+                    fontSize,
+                    lineHeight,
+                    letterSpacing,
+                    paragraphSpacing,
+                    textDecoration,
+                    textCase,
+                    leadingTrim,
+                    listSpacing,
+                    hangingPunctuation,
+                    hangingList,
+                    paragraphIndent,
+                  },
+                },
+              },
+              "*",
+            );
           }}
         >
           Create
