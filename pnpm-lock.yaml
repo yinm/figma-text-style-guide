@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@figma/plugin-typings':
         specifier: ^1.96.0
-        version: 1.97.0
+        version: 1.98.0
       '@ladle/react':
         specifier: ^4.1.0
         version: 4.1.0(@types/node@20.14.15)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
@@ -393,8 +393,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@figma/plugin-typings@1.97.0':
-    resolution: {integrity: sha512-AcmZey7TBbc43g2dO+9hjrcTbgb0UFY32do3to3rFU1OXb9hinsrmmbddyhD5105DHzRDac4oT7A5+VOow7p1Q==}
+  '@figma/plugin-typings@1.98.0':
+    resolution: {integrity: sha512-Bx5pBRf8XWeAFbDtKfdiUEM/UkCHyl4baOGb+7OPM0ozrzg5JNDH/BsrGA4EpuJKkS4uRmV525q3g067OX6VHg==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -4179,7 +4179,7 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@figma/plugin-typings@1.97.0': {}
+  '@figma/plugin-typings@1.98.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
