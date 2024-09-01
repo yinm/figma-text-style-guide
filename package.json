@@ -39,7 +39,7 @@
     "eslint-config-yinm": "^0.0.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "figma-api-stub": "^0.0.57",
-    "jsdom": "^24.1.0",
+    "jsdom": "^25.0.0",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
