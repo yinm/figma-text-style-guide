@@ -3,7 +3,7 @@ import yinmReact from "eslint-config-yinm/react";
 import yinmTypeScript from "eslint-config-yinm/typescript";
 import reactRefresh from "eslint-plugin-react-refresh";
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   ...yinmBase,
   ...yinmTypeScript,
