@@ -1,0 +1,32 @@
+{
+  "background": {
+    "fill": {
+      "primary": {
+        "$type": "color",
+        "$value": "{blue}"
+      },
+      "switch-thumb": {
+        "$type": "color",
+        "$value": "{white}"
+      },
+      "switch-track-off": {
+        "$type": "color",
+        "$value": "{gray}"
+      }
+    },
+    "primary": {
+      "$type": "color",
+      "$value": "{toolbar}"
+    }
+  },
+  "text": {
+    "label": {
+      "$type": "color",
+      "$value": "{white}"
+    },
+    "on-primary": {
+      "$type": "color",
+      "$value": "{white}"
+    }
+  }
+}
