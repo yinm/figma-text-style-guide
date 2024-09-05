@@ -1,0 +1,22 @@
+{
+  "blue": {
+    "$type": "color",
+    "$value": "#18a0fb"
+  },
+  "toolbar": {
+    "$type": "color",
+    "$value": "#2c2c2c"
+  },
+  "white": {
+    "$type": "color",
+    "$value": "#ffffff"
+  },
+  "White4": {
+    "$type": "color",
+    "$value": "#ffffff66"
+  },
+  "gray": {
+    "$type": "color",
+    "$value": "#808080"
+  }
+}
