@@ -12,7 +12,7 @@ export function Switch({ checked, toggleChecked }: Props) {
         data-testid="switch-track"
         className={clsx(
           ["inline-flex h-3 w-6 rounded-full p-[1px]"],
-          checked ? "bg-primary" : "bg-switch-track-off",
+          checked ? "bg-fill-primary" : "bg-switch-track-off",
         )}
         onClick={toggleChecked}
       >
