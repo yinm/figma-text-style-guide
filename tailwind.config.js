@@ -3,6 +3,8 @@ import {
   BackgroundFillSwitchThumb,
   BackgroundFillSwitchTrackOff,
   BackgroundPrimary,
+  RadiusFull,
+  RadiusLg,
   TextLabel,
   TextOnPrimary,
 } from "./design-tokens/dist/tokens.js";
@@ -22,8 +24,8 @@ export default {
       "on-primary": TextOnPrimary,
     },
     borderRadius: {
-      lg: "0.5rem",
-      full: "9999px",
+      lg: RadiusLg,
+      full: RadiusFull,
     },
     extend: {},
   },
