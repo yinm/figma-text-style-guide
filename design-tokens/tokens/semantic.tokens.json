@@ -3,30 +3,40 @@
     "fill": {
       "primary": {
         "$type": "color",
-        "$value": "{blue}"
+        "$value": "{color.blue}"
       },
       "switch-thumb": {
         "$type": "color",
-        "$value": "{white}"
+        "$value": "{color.white}"
       },
       "switch-track-off": {
         "$type": "color",
-        "$value": "{gray}"
+        "$value": "{color.gray}"
       }
     },
     "primary": {
       "$type": "color",
-      "$value": "{toolbar}"
+      "$value": "{color.toolbar}"
     }
   },
   "text": {
     "label": {
       "$type": "color",
-      "$value": "{white}"
+      "$value": "{color.white}"
     },
     "on-primary": {
       "$type": "color",
-      "$value": "{white}"
+      "$value": "{color.white}"
+    }
+  },
+  "radius": {
+    "lg": {
+      "$type": "dimension",
+      "$value": "{radius.8}"
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": "{radius.9999}"
     }
   }
 }
