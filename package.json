@@ -37,7 +37,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",
-    "eslint-config-yinm": "^0.0.2",
+    "eslint-config-yinm": "^0.0.3",
     "eslint-plugin-react-refresh": "^0.4.7",
     "figma-api-stub": "^0.0.57",
     "jsdom": "^25.0.0",
