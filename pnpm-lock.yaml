@@ -52,8 +52,8 @@ importers:
         specifier: ^9.5.0
         version: 9.10.0(jiti@1.21.6)
       eslint-config-yinm:
-        specifier: ^0.0.3
-        version: 0.0.3(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+        specifier: ^0.0.4
+        version: 0.0.4(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       eslint-plugin-react-refresh:
         specifier: ^0.4.7
         version: 0.4.12(eslint@9.10.0(jiti@1.21.6))
@@ -1549,8 +1549,8 @@ packages:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
 
-  eslint-config-yinm@0.0.3:
-    resolution: {integrity: sha512-m5jK2xJA7DmnDl+fqCvKU3GgpZw1ULOHKbe7q3E6uQPcWgNJugcoyN80P/Szt6GM3wz6V04dUbD84aenyWgPgg==}
+  eslint-config-yinm@0.0.4:
+    resolution: {integrity: sha512-owFmwBon1rSkaVeRrCwonsGunqpldwhH6pNFzWAocI6dp5g+HWGZWiAlN4dK2mA4mA/05CaN73Gw1CIJK2WQsQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       eslint: '>= 9'
@@ -5438,7 +5438,7 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-config-yinm@0.0.3(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2):
+  eslint-config-yinm@0.0.4(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2):
     dependencies:
       '@eslint/compat': 1.1.0
       eslint: 9.10.0(jiti@1.21.6)
@@ -6990,7 +6990,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.6
+      debug: 4.3.7
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
@@ -7209,7 +7209,7 @@ snapshots:
       got: 12.6.1
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   parent-module@1.0.1:
     dependencies:
