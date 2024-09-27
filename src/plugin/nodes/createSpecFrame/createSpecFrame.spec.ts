@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { NeedToOutputTextStyles } from "../../outputableTextStyles";
 import { styles } from "../styles";
 import { createSpecFrame } from "./createSpecFrame";
 
 type TextStyles = Parameters<typeof createSpecFrame>[0];
+type NeedToOutputTextStyles = Parameters<typeof createSpecFrame>[1];
 
 function keyDelimiter(keyText: string) {
   return `${keyText}: `;
