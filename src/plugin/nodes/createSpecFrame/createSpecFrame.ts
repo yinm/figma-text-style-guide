@@ -1,7 +1,5 @@
-import {
-  type NeedToOutputTextStyles,
-  type OutputableTextStyles,
-} from "../../outputableTextStyles";
+import { type NeedToOutputTextStyles } from "../../../shared/types/pluginMessagesFromUi/NeedToOutputTextStyles";
+import { type OutputableTextStyles } from "../../outputableTextStyles";
 import { getObjectKeys } from "../../utils/getObjectKeys";
 import { createPropertyFrame } from "../createPropertyFrame/createPropertyFrame";
 import { styles } from "../styles";
