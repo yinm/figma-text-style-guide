@@ -17,6 +17,7 @@
     "lint:fix": "eslint --fix 'src/'",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "scaffdog": "scaffdog generate",
     "ladle": "ladle serve  --config ./src/ui/.ladle"
   },
