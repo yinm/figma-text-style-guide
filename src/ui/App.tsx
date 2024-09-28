@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./components/Button/Button";
 import { LabelAndSwitch } from "./components/LabelAndSwitch/LabelAndSwitch";
+import { postMessageFromUi } from "./utils/postMessageFromUi";
 
 function toggleBoolean(previous: boolean) {
   return !previous;
@@ -106,28 +107,24 @@ function App() {
       <div className="flex justify-end">
         <Button
           onClick={() => {
-            parent.postMessage(
-              {
-                pluginMessage: {
-                  needToOutputTextStyles: {
-                    fontFamily,
-                    fontStyle,
-                    fontSize,
-                    lineHeight,
-                    letterSpacing,
-                    paragraphSpacing,
-                    textDecoration,
-                    textCase,
-                    leadingTrim,
-                    listSpacing,
-                    hangingPunctuation,
-                    hangingList,
-                    paragraphIndent,
-                  },
-                },
+            postMessageFromUi({
+              type: "createStyleGuide",
+              payload: {
+                fontFamily,
+                fontStyle,
+                fontSize,
+                lineHeight,
+                letterSpacing,
+                paragraphSpacing,
+                textDecoration,
+                textCase,
+                leadingTrim,
+                listSpacing,
+                hangingPunctuation,
+                hangingList,
+                paragraphIndent,
               },
-              "*",
-            );
+            });
           }}
         >
           Create
