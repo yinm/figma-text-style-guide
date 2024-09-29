@@ -9,5 +9,5 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["vite.config.ui.ts"]
+  "include": ["vite.config.plugin.ts", "vite.config.ui.ts"]
 }
