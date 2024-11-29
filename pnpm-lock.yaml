@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@figma/plugin-typings':
         specifier: ^1.96.0
-        version: 1.102.0
+        version: 1.103.0
       '@ladle/react':
         specifier: ^4.1.0
         version: 4.1.2(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
@@ -392,8 +392,8 @@ packages:
     resolution: {integrity: sha512-2b/g5hRmpbb1o4GnTZax9N9m0FXzz9OV42ZzI4rDDMDuHUqigAiQCEWChBWCY4ztAGVRjoWT19v0yMmc5/L5kA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@figma/plugin-typings@1.102.0':
-    resolution: {integrity: sha512-nSUOgRRrWy4fs3rJHKUkz5PjsphG9mavYyQpUpwaw8dUF56lEuJJhfrEAnIfpxnzzlbhKWaB1///L9GYP1qnAw==}
+  '@figma/plugin-typings@1.103.0':
+    resolution: {integrity: sha512-hinDFmafuvjiOSHpbaqLKTiFVBksjFgEuAIQ0OpF9BhkCqIpJqrEgGwJkOnvLtodvaJaabw5kUce1xaIibRciw==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4107,7 +4107,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@figma/plugin-typings@1.102.0': {}
+  '@figma/plugin-typings@1.103.0': {}
 
   '@humanfs/core@0.19.1': {}
 
