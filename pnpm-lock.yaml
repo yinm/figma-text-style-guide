@@ -56,7 +56,7 @@ importers:
         version: 0.0.5(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
       eslint-plugin-react-refresh:
         specifier: ^0.4.7
-        version: 0.4.15(eslint@9.16.0(jiti@1.21.6))
+        version: 0.4.16(eslint@9.16.0(jiti@1.21.6))
       figma-api-stub:
         specifier: ^0.0.57
         version: 0.0.57
@@ -1764,8 +1764,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-refresh@0.4.15:
-    resolution: {integrity: sha512-poU5qfmwLS5WO69drZnB9J1vXv+NQkE0p+oIY4B85Z9IuvpaIdHa+9IE/sFrN79QW49QcHQIP6c7NHpDMQ9TvA==}
+  eslint-plugin-react-refresh@0.4.16:
+    resolution: {integrity: sha512-slterMlxAhov/DZO8NScf6mEeMBBXodFUolijDvrtTxyezyLoTQaa73FyYus/VbTdftd8wBgBxPMRk3poleXNQ==}
     peerDependencies:
       eslint: '>=8.40'
 
@@ -5793,7 +5793,7 @@ snapshots:
     dependencies:
       eslint: 9.16.0(jiti@1.21.6)
 
-  eslint-plugin-react-refresh@0.4.15(eslint@9.16.0(jiti@1.21.6)):
+  eslint-plugin-react-refresh@0.4.16(eslint@9.16.0(jiti@1.21.6)):
     dependencies:
       eslint: 9.16.0(jiti@1.21.6)
 
