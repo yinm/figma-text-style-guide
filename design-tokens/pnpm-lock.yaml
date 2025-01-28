@@ -10,7 +10,7 @@ importers:
     devDependencies:
       style-dictionary:
         specifier: ^4.1.0
-        version: 4.3.1
+        version: 4.3.2
 
 packages:
 
@@ -529,8 +529,8 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
-  style-dictionary@4.3.1:
-    resolution: {integrity: sha512-J0oXrzC+kSBMrtcZWC5G3rcHazgPOOUh/xRgNTg9ONNtbN/IZuS5GVRzC3cd8Hapfumk6j82zi/igMFYWrYGMw==}
+  style-dictionary@4.3.2:
+    resolution: {integrity: sha512-kBDUWWWpaubHsMsA0pRegKA1+ocYFTACj+Y5o/FeMGGhTPBXigH/hVr3ZVwKVx2ITiuNGJY3SrbrW1cOJIsutA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1157,7 +1157,7 @@ snapshots:
     dependencies:
       ansi-regex: 6.1.0
 
-  style-dictionary@4.3.1:
+  style-dictionary@4.3.2:
     dependencies:
       '@bundled-es-modules/deepmerge': 4.3.1
       '@bundled-es-modules/glob': 10.4.2
