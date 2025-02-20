@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@figma/plugin-typings':
         specifier: ^1.96.0
-        version: 1.106.0
+        version: 1.107.0
       '@ladle/react':
         specifier: ^5.0.0
         version: 5.0.1(@types/node@22.13.2)(@types/react@18.3.18)(acorn@8.14.0)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)(yaml@2.6.1)
@@ -415,8 +415,8 @@ packages:
     resolution: {integrity: sha512-+0TjwR1eAUdZtvv/ir1mGX+v0tUoR3VEPB8Up0LLJC+whRW0GgBBtpbOkg/a/U4Dxa6l5a3l9AJ1aWIQVyoWJA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@figma/plugin-typings@1.106.0':
-    resolution: {integrity: sha512-fUWranOKUEDJe80GUAgs7gLyMdkiBdwi72QPx1XctB62ecmedpTO/qKx/C7GcoxeRVQ90n+NWS7zpSInWMTJkA==}
+  '@figma/plugin-typings@1.107.0':
+    resolution: {integrity: sha512-wC+Wwnk5H22W71xoq4ZQBHuXJL8Q7eMMBP+ubHZjAVybrJRysj/A9gJTIguVEcV+x2zpRsVunyVyWxg56qZr8g==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4382,7 +4382,7 @@ snapshots:
       '@eslint/core': 0.11.0
       levn: 0.4.1
 
-  '@figma/plugin-typings@1.106.0': {}
+  '@figma/plugin-typings@1.107.0': {}
 
   '@humanfs/core@0.19.1': {}
 
